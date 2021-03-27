@@ -413,11 +413,12 @@ div > .header-link:focus {
 margin-right: 10px;
 }
 
-.team-icon-link:hover .icon,
-.team-icon-link:focus .icon {
-background-color: var(--accent-color);
-fill: var(--section-accent-color);
-}
+.team-icon-link:hover,
+.team-icon-link:focus  {
+ background-color: var(--accent-color);
+ fill: var(--section-accent-color);
+} 
+
 
 /* Clients */
 .client-title {
