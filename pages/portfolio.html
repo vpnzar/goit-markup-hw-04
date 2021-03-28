@@ -40,10 +40,18 @@
           </ul>
         </nav>
         <div class="header-block-link">
-          <a class="header-link" href="mailto:info@devstudio.com"
+          <a class="header-link" href="mailto:info@devstudio.com">
+            <svg class="icon">
+              <use href="../images/header-sprite.svg#icon-mail"></use></svg
             >info@devstudio.com</a
           >
-          <a class="header-link" href="tel:+380961111111">+38 096 111 11 11</a>
+          <a class="header-link" href="tel:+380961111111"
+            ><svg class="icon">
+              <use
+                href="../images/header-sprite.svg#icon-smartphone"
+              ></use></svg
+            >+38 096 111 11 11</a
+          >
         </div>
       </div>
     </header>
@@ -54,17 +62,19 @@
         <div class="container">
           <h1 class="visually-hidden">Наши работы</h1>
           <ul class="portfolio-button list">
-            <li>
+            <li class="btn-item">
               <button class="button list current" type="button">Все</button>
             </li>
-            <li>
+            <li class="btn-item">
               <button class="button list" type="button">Веб-сайты</button>
             </li>
-            <li>
+            <li class="btn-item">
               <button class="button list" type="button">Приложения</button>
             </li>
-            <li><button class="button list" type="button">Дизайн</button></li>
-            <li>
+            <li class="btn-item">
+              <button class="button list" type="button">Дизайн</button>
+            </li>
+            <li class="btn-item">
               <button class="button list" type="button">Маркетинг</button>
             </li>
           </ul>
@@ -201,16 +211,71 @@
     <!--Контакты-->
     <footer class="footer">
       <div class="container">
-        <a href="../" class="logo footer-logo"
-          ><span class="accent-logo">Web</span>Studio</a
-        >
-        <address class="address">
-          <p>г. Киев, пр-т Леси Украинки, 26</p>
-          <a class="contact-link" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
+        <div class="footer-contact">
+          <a href="../index.html" class="logo footer-logo"
+            ><span class="accent-logo">Web</span>Studio</a
           >
-          <a class="contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
-        </address>
+          <address class="address">
+            <p>г. Киев, пр-т Леси Украинки, 26</p>
+            <a class="contact-link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+            <a class="contact-link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </address>
+        </div>
+        <div class="footer-join">
+          <h3 class="join-title">Присоединяйтесь</h3>
+          <ul class="join-list">
+            <li class="join-item">
+              <a
+                href=""
+                class="join-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon">
+                  <use
+                    href="../images/team-sprite.svg#icon-instagram"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="join-item">
+              <a
+                href=""
+                class="join-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon">
+                  <use href="../images/team-sprite.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="join-item">
+              <a
+                href=""
+                class="join-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon">
+                  <use
+                    href="../images/team-sprite.svg#icon-facebook"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="join-item">
+              <a
+                href=""
+                class="join-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg class="icon">
+                  <use
+                    href="../images/team-sprite.svg#icon-linkedin"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
