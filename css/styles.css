@@ -8,7 +8,7 @@ html {
 }
 
 * {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
 }
 
 h1,
@@ -128,6 +128,7 @@ p {
 .header-nav a:hover,
 .header-nav a:focus {
   color: var(--accent-color);
+  transition: transform 250ms ease;
 }
 
 .site-nav {
@@ -159,6 +160,7 @@ p {
 .header-link:focus .icon {
   stroke: var(--accent-color);
   fill: var(--accent-color);
+  transition: transform 250ms ease;
 }
 
 .header-link {
@@ -182,14 +184,15 @@ p {
 div > .header-link:hover,
 div > .header-link:focus {
   color: var(--accent-color);
+  transition: transform 250ms ease;
 }
 
 .header-link > .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: auto;
 }
 
 /* Flex-Container */
@@ -226,6 +229,7 @@ div > .header-link:focus {
 .hero-section .button:hover,
 .hero-section .button:focus {
   background-color: var(--hero-background-color);
+  transition: transform 250ms ease;
 }
 
 /* Examples-Buttons */
@@ -248,6 +252,7 @@ div > .header-link:focus {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: transform 250ms ease;
 }
 
 /* Hero-Section*/
@@ -356,16 +361,42 @@ div > .header-link:focus {
 .gallery .list {
   display: flex;
   align-items: center;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .gallery-item {
+  display: flex;
   margin-right: auto;
   margin-left: auto;
-  flax-basis: calc((100% - 30px * 3) / 3);
+  flex-basis: calc((100% - (30px * 3)) / 3);
 }
 
-.gallery-item:not(:last-child) {
-  margin-right: 30px;
+/* Activity-opacity-text */
+
+.gallery-thumb {
+  position: relative;
+}
+
+.gallery-text {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  width: 370px;
+  height: 70px;
+  padding: 27px 82px 27px 83px;
+
+  /* font-style */
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--section-accent-color);
+  background-color: var(--secondary-background-color);
+  opacity: 0.8;
 }
 
 /* Team-section */
@@ -443,6 +474,7 @@ div > .header-link:focus {
 .team-icon-link:focus {
   background-color: var(--accent-color);
   fill: var(--section-accent-color);
+  transition: transform 250ms ease;
 }
 
 /* Clients */
@@ -467,7 +499,7 @@ div > .header-link:focus {
 
 .client-link {
   display: flex;
-  width: 170px;
+  width: 168px;
   height: 90px;
   justify-content: center;
   align-items: center;
@@ -476,12 +508,14 @@ div > .header-link:focus {
 .client-link:hover .icon,
 .client-link:focus .icon {
   fill: var(--accent-color);
+  transition: transform 250ms ease;
 }
 
 .client-item:hover,
 .client-item:focus {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
+  transition: transform 250ms ease;
 }
 
 .client-list {
@@ -569,6 +603,39 @@ div > .header-link:focus {
 .portfolio-list:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms ease;
+}
+
+/* Portfolio-overlay */
+
+.prtf-thumb-link {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.prtf-thumb-link:hover .prtf-description {
+  background-color: var(--accent-color);
+  opacity: 0.8;
+  transform: translatex(0);
+  transition: transform 250ms ease;
+}
+
+.prtf-description {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  padding: 63px 45px 63px 25px;
+  width: 100%;
+  height: 100%;
+  /* Font-style */
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  opacity: 0;
+  transform: translatey(100%);
 }
 
 /* Footer Logo*/
@@ -580,6 +647,8 @@ div > .header-link:focus {
 /* Footer */
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: var(--section-accent-color);
   background-color: var(--secondary-background-color);
   font-size: 14px;
@@ -594,8 +663,6 @@ div > .header-link:focus {
 
 .footer .container {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 address .contact-link {
@@ -670,6 +737,7 @@ address > p {
 .join-icon:focus {
   background-color: var(--accent-color);
   fill: var(--section-accent-color);
+  transition: transform 250ms ease;
 }
 .join-item {
   list-style: none;
